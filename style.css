@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+:root {
+    --deSatRed: hsl(0, 36%, 70%);
+    --softRed: hsl(0, 93%, 68%);
+    --darkGrayRed: hsl(0, 6%, 24%);
+
+}
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    font-family: 'Josefin Sans',sans-serif;
+}
+
+
+.container {
+    width: 376px;
+    margin: 30px auto;
+}
+
+.logo {
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+.logo img {
+    width: 90px;
+    height: 23px;
+}
+
+.content_photo {
+    margin-bottom: 40px;
+    height: 220px;
+}
+
+.content_photo .desktop {
+    display: none;
+}
+.content_photo .mobile {
+    height: 100%;
+    width: 100%;
+}
+
+
+.content_para {
+    position: relative;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.content_para h1 span {
+    color: var(--deSatRed);
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+.content_para h1 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-size: 37px;
+    color: var(--darkGrayRed);
+}
+.content_para p {
+    color: var(--deSatRed);
+    line-height: 1.45;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.content_para .content_email {
+    margin: 0;
+    padding: 17px;
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid var(--deSatRed);
+    width: 310px;
+    height: 50px;
+    color: var(--darkGrayRed);
+    font-size: 13px;
+}
+input::placeholder {
+    color: var(--deSatRed);
+}
+.content_para .content_button {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 30px;
+    width: 70px;
+    height: 50px;
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+    transition: transform .3s;
+}
+.content_para .content_button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transform: scale(1.2);
+    background-image: linear-gradient(135deg, hsl(0, 100%, 98%), hsl(0, 74%, 74%));
+}
+
+.content_para .error {
+    position: absolute;
+    right: 86px;
+    bottom: 13px;
+}
+.content_para .result {
+    position: absolute;
+    left: 35px;
+    bottom: -25px;
+    font-size: 13px;
+    color: var(--softRed);
+}
+
+
+.close {
+    display: none;
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    .container {
+        width:auto;
+        margin: 0;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        top: 10px;
+        left: 30px;
+    }
+    .content {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-left: 30px;
+        height: 100vh;
+    }
+    .content_photo {
+        height: auto;
+    }
+    .content_photo .mobile{
+        display: none;
+    }
+    .content_photo .desktop {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        flex-basis: 50%;
+    }
+    .content_para {
+        text-align: left;
+        margin-top: 200px;
+        padding-left: 50px;
+        padding-right: 150px;
+        flex-basis: 50%;
+    }
+    .content_para h1 span {
+        font-size: 50px;
+        letter-spacing: 13px;
+    }
+    .content_para h1 {
+        font-size: 50px;
+        letter-spacing: 14px;
+        line-height: 1.05;
+        margin-bottom: 30px;
+    }
+    .content_para p {
+        margin-bottom: 30px;
+    }
+    
+    form {
+        display: inline;
+        position: relative;
+    }
+    .content_para .content_email {
+        width: 100%;
+        
+    }
+    .content_para .content_button {
+        position: absolute;
+        top: -17px;
+        right: -14px;
+    }
+    .content_para .error {
+        position: absolute;
+        bottom: -3px;
+        right: 64px;
+    }
+    .content_para .result {
+        position: absolute;
+        bottom: -40px;
+        left: 30px;
+    }
+}
+
+
